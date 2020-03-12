@@ -23,14 +23,14 @@ public class Base {
 	public WebDriver initializeDriver() throws IOException
 	{
 		prop=new Properties();
-		FileInputStream fis=new FileInputStream("/Users/568650/git/Seleniumdataproviderexcel/SeleniumP/src/main/java/Resources/data.properties");
+		FileInputStream fis=new FileInputStream("C:\\Users\\PSK Enterprises\\Documents\\Selenium\\Selenium_DataProvider_With_Excel\\SeleniumP\\src\\main\\java\\Resources\\data.properties");
 		prop.load(fis);
 		
 		String browsername=prop.getProperty("browser");
 		
 		if(browsername.equalsIgnoreCase("chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver","/Users/568650/Documents/Selenium/driver/chromedriver");
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\PSK Enterprises\\Desktop\\chromedriver\\chromedriver.exe");
 			
 			driver=new ChromeDriver();
 			
