@@ -1,10 +1,8 @@
 package Seleniumproject.SeleniumP;
 
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
@@ -19,18 +17,21 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import PageObjects.GetCity;
 import PageObjects.Login;
 import Resources.Base;
 import Util.TestUtil;
 
-public class Logintests  extends Base{
+public class Entertainmentnews  extends Base{
 	
 	
 	
@@ -41,10 +42,11 @@ public class Logintests  extends Base{
 
 	
 	@BeforeMethod
-	public void setUp() throws IOException
+	public void setUp() throws IOException, InterruptedException
 	{
 		driver=initializeDriver();
-		driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty("url2"));
+		Thread.sleep(5000);
 		
 	}
 	
@@ -54,7 +56,7 @@ public class Logintests  extends Base{
 	
 
 	
-
+	
 	@AfterMethod
 	public void tearDown()
 	{
@@ -62,27 +64,20 @@ public class Logintests  extends Base{
 	}
 	
 	
-	
-	@Test(dataProvider="getLoginData")
-	public void LoginTest1(String username,String password)
+	@Test
+	public void getAllCities()
 	{
-		Login a=new Login(driver);
+		GetCity gc=new GetCity(driver);
 		
-		a.getUsername().sendKeys(username);
-		a.getPassword().sendKeys(password);
+		List<WebElement> cities=gc.getCity();
 		
-		a.subButton().click();
-		
-		
-	}
-	
-	@DataProvider
-	public Object[][] getLoginData() throws EncryptedDocumentException, IOException
-	{
-		Object [][] data=TestUtil.getTestData("Login");	
-		
-		return data;
+		for (WebElement c : cities) {
 			
+			System.out.println(c);
+			
+		}
 	}
+	
+
 
 }

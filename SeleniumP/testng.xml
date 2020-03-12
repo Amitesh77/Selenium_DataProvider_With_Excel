@@ -3,10 +3,12 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Seleniumproject.SeleniumP.Logintests"/>
+  <!--     <class name="Seleniumproject.SeleniumP.Logintests"/> -->
+      <class name="Seleniumproject.SeleniumP.Entertainmentnews"/>
 <!--       <class name="Seleniumproject.SeleniumP.AppTest"/>
       <class name="Seleniumproject.SeleniumP.Logintest"/>
-      <class name="Seleniumproject.SeleniumP.GetText"/> -->
+      <class name="Seleniumproject.SeleniumP.GetText"/>
+      <class name="Seleniumproject.SeleniumP.WindowHandles"/> -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

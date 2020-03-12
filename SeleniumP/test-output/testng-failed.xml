@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Seleniumproject.SeleniumP.Logintests">
+      <class name="Seleniumproject.SeleniumP.Entertainmentnews">
         <methods>
           <include name="setUp"/>
+          <include name="getAllCities"/>
           <include name="tearDown"/>
-          <include name="LoginTest1" invocation-numbers="0 2"/>
         </methods>
-      </class> <!-- Seleniumproject.SeleniumP.Logintests -->
+      </class> <!-- Seleniumproject.SeleniumP.Entertainmentnews -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

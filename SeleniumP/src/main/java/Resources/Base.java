@@ -23,7 +23,7 @@ public class Base {
 	public WebDriver initializeDriver() throws IOException
 	{
 		prop=new Properties();
-		FileInputStream fis=new FileInputStream("/Users/568650/Documents/Selenium/SeleniumP/src/main/java/Resources/data.properties");
+		FileInputStream fis=new FileInputStream("/Users/568650/git/Seleniumdataproviderexcel/SeleniumP/src/main/java/Resources/data.properties");
 		prop.load(fis);
 		
 		String browsername=prop.getProperty("browser");
